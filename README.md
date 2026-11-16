@@ -17,11 +17,26 @@ implements, `_pm/MCP_CONNECTOR_PLAN.md`/`_pm/MCP_CONNECTOR_PRD.md` for the serve
 
 ## Install
 
+`claude plugin install` only accepts a plugin name resolved through a registered marketplace —
+not a raw filesystem path, so `claude plugin install /path/to/talentbook-mcp` fails with
+"not found in any configured marketplace." This repo doubles as its own single-plugin
+marketplace (`.claude-plugin/marketplace.json`), so either of these works:
+
 ```bash
-claude plugin install /path/to/talentbook-mcp   # local path, during development
+# Persistent install, straight from GitHub (adds the marketplace and installs in one step):
+claude plugin install talentbook-mcp --marketplace asehmi/talentbook-mcp
+
+# One-off session test from a local clone, no install:
+claude --plugin-dir /path/to/talentbook-mcp
 ```
 
-Once a marketplace is set up for it, install from that marketplace instead.
+For a persistent install from a local clone during development, add it as a marketplace first,
+then install from it by name:
+
+```bash
+claude plugin marketplace add /path/to/talentbook-mcp
+claude plugin install talentbook-mcp@talentbook-mcp-marketplace
+```
 
 ## Configure
 

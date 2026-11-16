@@ -1,0 +1,14 @@
+{
+  "name": "talentbook-mcp-marketplace",
+  "owner": {
+    "name": "Arvindra Sehmi"
+  },
+  "description": "Single-plugin marketplace for talentbook-mcp, the Claude Code plugin connecting an agent to Talentbook's MCP server.",
+  "plugins": [
+    {
+      "name": "talentbook-mcp",
+      "source": ".",
+      "description": "Connects an agent to your own Talentbook data over MCP, with usage guidance for the tool catalog's scopes, idempotency keys, and rate limits."
+    }
+  ]
+}
