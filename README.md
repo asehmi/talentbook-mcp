@@ -50,6 +50,12 @@ plugin-side cleanup needed.
   check.
 - `commands/talentbook-checkin.md` — `/talentbook-mcp:talentbook-checkin`, a canned weekly
   reflective journal-entry assistant.
+- `commands/talentbook-consultation.md` — `/talentbook-mcp:talentbook-consultation`, drives a
+  guided consultation end to end with the draft-then-approve pattern.
+- `commands/talentbook-team-digest.md` — `/talentbook-mcp:talentbook-team-digest`, composes a
+  written digest across a manager's direct reports' latest progress summaries.
+- `commands/talentbook-goal-planner.md` — `/talentbook-mcp:talentbook-goal-planner`, drafts
+  goals targeting the biggest gaps from `get_my_gap_analysis`.
 
 ## Non-goals
 

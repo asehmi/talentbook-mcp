@@ -93,12 +93,14 @@ offered (a string), or a list of labels for a `"multiple"` question — always m
 ## Common requests this connector is good for
 
 - **A reflective check-in**: read recent goals/skills/journal, draft a grounded weekly
-  reflection, approve, then `add_journal_entry`.
+  reflection, approve, then `add_journal_entry`. Also available as
+  `/talentbook-mcp:talentbook-checkin`.
 - **Running a consultation**: drive the fixed flow above, drafting each answer from the user's
-  real tracked data per the draft-then-approve rule.
+  real tracked data per the draft-then-approve rule. Also available as
+  `/talentbook-mcp:talentbook-consultation`.
 - **A manager's team digest**: `get_my_team_summary` per direct report, composed into one
   written summary (requires `read:team`, and only surfaces reports who actually report to this
-  token's owner).
+  token's owner). Also available as `/talentbook-mcp:talentbook-team-digest`.
 - **A roster sync from an HRIS export**: map the export to `{"email", "reports_to"}` pairs and
   call `sync_org_roster_role` once as a batch (requires an org-scoped `write:org_roster` token)
   — the whole batch either applies or changes nothing, so this is safe to drive directly rather
@@ -109,7 +111,7 @@ offered (a string), or a list of labels for a `"multiple"` question — always m
   conversationally (requires an org-scoped `write:org_baselines` or `write:org_work_jobs` token).
 - **Gap-aware goal planning**: `get_my_gap_analysis` to find the biggest gaps against the
   user's role, draft candidate goals tagged with the relevant `skill_keys`, approve, then
-  `create_goal`.
+  `create_goal`. Also available as `/talentbook-mcp:talentbook-goal-planner`.
 
 If a request needs a scope the connected token doesn't have, say so plainly rather than
 attempting a workaround — the fix is reissuing the token at `/app/connected-agents`, not a
