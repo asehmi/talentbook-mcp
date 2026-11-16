@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "talentbook": {
+      "type": "http",
+      "url": "${user_config.talentbook_server_url}",
+      "headers": {
+        "Authorization": "Bearer ${user_config.talentbook_pat}"
+      }
+    }
+  }
+}

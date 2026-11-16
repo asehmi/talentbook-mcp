@@ -1,0 +1,25 @@
+{
+  "name": "talentbook-mcp",
+  "displayName": "Talentbook",
+  "version": "0.1.0",
+  "description": "Connects an agent to your own Talentbook data (goals, skills, OKRs, journal, consultations, org baselines) over MCP, with usage guidance for the tool catalog's scopes, idempotency keys, and rate limits.",
+  "author": {
+    "name": "Arvindra Sehmi"
+  },
+  "keywords": ["talentbook", "mcp", "career-development", "goals", "okrs"],
+  "userConfig": {
+    "talentbook_server_url": {
+      "type": "string",
+      "title": "Talentbook server URL",
+      "description": "The MCP endpoint, including the trailing slash — e.g. https://talentbook.io/mcp/ for production, or http://localhost:8888/mcp/ for a local dev server. The trailing slash is required; a URL missing it fails to connect.",
+      "default": "https://talentbook.io/mcp/"
+    },
+    "talentbook_pat": {
+      "type": "string",
+      "title": "Talentbook personal access token",
+      "description": "A tb_pat_... token from Talentbook's /app/connected-agents page, scoped to what you want this agent to do (e.g. read:goals,read:skills,write:journal for a journaling assistant). Stored securely, never written to a plain settings file.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}
