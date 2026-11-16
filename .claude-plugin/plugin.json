@@ -6,6 +6,8 @@
   "author": {
     "name": "Arvindra Sehmi"
   },
+  "license": "MIT",
+  "repository": "https://github.com/asehmi/talentbook-mcp",
   "keywords": ["talentbook", "mcp", "career-development", "goals", "okrs"],
   "userConfig": {
     "talentbook_server_url": {
